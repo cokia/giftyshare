@@ -1,19 +1,11 @@
 import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
-} from 'react-native';
+import { SafeAreaView,StyleSheet,StatusBar,Text,ScrollView,View } from 'react-native';
+import TopBar from './components/topBar';
+import CardView from './components/cardView'
 
 import {
   Header,
-  LearnMoreLinks,
   Colors,
-  DebugInstructions,
-  ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
 declare const global: {HermesInternal: null | {}};
@@ -23,10 +15,11 @@ const App = () => {
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
+        <TopBar></TopBar>
         <ScrollView
           contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}>
-          <Header />
+          {/* <Header /> */}
           {global.HermesInternal == null ? null : (
             <View style={styles.engine}>
             </View>
@@ -35,6 +28,8 @@ const App = () => {
             <View style={styles.sectionContainer}>
               <Text style={styles.sectionTitle}>Step One</Text>
             </View>
+            {/* @ts-ignore */}
+            <CardView></CardView>
           </View>
         </ScrollView>
       </SafeAreaView>
