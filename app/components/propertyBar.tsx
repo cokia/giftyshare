@@ -5,11 +5,11 @@ import {
   StyleSheet, Text, Button, View,
 } from 'react-native';
 
-class TopBar extends React.Component {
+class PropertyBar extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Button title="Press Me" />
+        <Text>대충 여기에 라디오버튼 들어갈 자리 라는 뜻</Text>
       </View>
     );
   }
@@ -28,4 +28,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default TopBar;
+export default PropertyBar;

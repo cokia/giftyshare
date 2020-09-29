@@ -6,7 +6,7 @@ import {
 import {
   Colors,
 } from 'react-native/Libraries/NewAppScreen';
-import TopBar from './components/topBar';
+import PropertyBar from './components/propertyBar';
 import CardView from './components/cardView';
 
 declare const global: {HermesInternal: null | {}};
@@ -15,22 +15,25 @@ const App = () => (
   <>
     <StatusBar barStyle="dark-content" />
     <SafeAreaView>
-      <TopBar />
+      {/* <Header /> */}
+      {global.HermesInternal == null ? null : (
+        <View style={styles.engine} />
+      )}
+      <View style={styles.body}>
+        <View style={styles.sectionContainer}>
+          <Text style={styles.sectionTitle}>
+            기프티쉐어,
+            ~~웅앵웅
+          </Text>
+        </View>
+        <PropertyBar />
+      </View>
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         style={styles.scrollView}
       >
-        {/* <Header /> */}
-        {global.HermesInternal == null ? null : (
-          <View style={styles.engine} />
-        )}
-        <View style={styles.body}>
-          <View style={styles.sectionContainer}>
-            <Text style={styles.sectionTitle}>Step One</Text>
-          </View>
-          {/* @ts-ignore */}
-          <CardView />
-        </View>
+        {/* @ts-ignore */}
+        <CardView />
       </ScrollView>
     </SafeAreaView>
   </>
