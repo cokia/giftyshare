@@ -1,41 +1,40 @@
+/* eslint-disable no-use-before-define */
 import React from 'react';
-import { SafeAreaView,StyleSheet,StatusBar,Text,ScrollView,View } from 'react-native';
-import TopBar from './components/topBar';
-import CardView from './components/cardView'
-
 import {
-  Header,
+  SafeAreaView, StyleSheet, StatusBar, Text, ScrollView, View,
+} from 'react-native';
+import {
   Colors,
 } from 'react-native/Libraries/NewAppScreen';
+import TopBar from './components/topBar';
+import CardView from './components/cardView';
 
 declare const global: {HermesInternal: null | {}};
 
-const App = () => {
-  return (
-    <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <TopBar></TopBar>
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}>
-          {/* <Header /> */}
-          {global.HermesInternal == null ? null : (
-            <View style={styles.engine}>
-            </View>
-          )}
-          <View style={styles.body}>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Step One</Text>
-            </View>
-            {/* @ts-ignore */}
-            <CardView></CardView>
+const App = () => (
+  <>
+    <StatusBar barStyle="dark-content" />
+    <SafeAreaView>
+      <TopBar />
+      <ScrollView
+        contentInsetAdjustmentBehavior="automatic"
+        style={styles.scrollView}
+      >
+        {/* <Header /> */}
+        {global.HermesInternal == null ? null : (
+          <View style={styles.engine} />
+        )}
+        <View style={styles.body}>
+          <View style={styles.sectionContainer}>
+            <Text style={styles.sectionTitle}>Step One</Text>
           </View>
-        </ScrollView>
-      </SafeAreaView>
-    </>
-  );
-};
+          {/* @ts-ignore */}
+          <CardView />
+        </View>
+      </ScrollView>
+    </SafeAreaView>
+  </>
+);
 
 const styles = StyleSheet.create({
   scrollView: {

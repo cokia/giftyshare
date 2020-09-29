@@ -14,23 +14,15 @@ export default class Giftview extends React.Component {
     return (
       <SafeAreaView style={styles.safeAreaView}>
         <View style={styles.container}>
-          <View flexDirection="column">
-            <View flexDirection="row">
-              <Giftcard />
-              <Giftcard />
-            </View>
-            <View flexDirection="row">
-              <Giftcard />
-              <Giftcard />
-            </View>
-            <View flexDirection="row">
-              <Giftcard />
-              <Giftcard />
-            </View>
-            <View flexDirection="row">
-              <Giftcard />
-              <Giftcard />
-            </View>
+          <View style={styles.test}>
+            <Giftcard bgColor="#123dfd" enddate="2020-09-16" giftname="TEST" brandname="스타벅스" />
+            <Giftcard />
+            <Giftcard />
+            <Giftcard />
+            <Giftcard />
+            <Giftcard />
+            <Giftcard />
+            <Giftcard />
           </View>
         </View>
       </SafeAreaView>
@@ -42,9 +34,15 @@ const styles = StyleSheet.create({
   safeAreaView: {
     flex: 1,
   },
+  test: {
+    flexWrap: 'wrap',
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
   container: {
     flex: 1,
-    // backgroundColor: '#EEEEEE',
+    display: 'flex',
   },
   text: {
     textAlign: 'center',

@@ -1,10 +1,12 @@
+/* eslint-disable react/destructuring-assignment */
+/* eslint-disable react/prop-types */
 /* eslint-disable import/no-unresolved */
 /* eslint-disable no-use-before-define */
 /* eslint-disable react/prefer-stateless-function */
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import {
-  StyleSheet, Text, SafeAreaView,
+  StyleSheet, Text,
 } from 'react-native';
 import CardView from 'react-native-cardview';
 
@@ -16,9 +18,22 @@ export default class Giftcard extends React.Component {
         cardElevation={5}
         cardMaxElevation={5}
         cornerRadius={5}
-        style={styles.card}
+        style={[{ backgoundColor: '#125d34' },
+          styles.card,
+        ]}
       >
-        <Text style={styles.text}>asdasd</Text>
+        <Text style={styles.text}>
+          유효기간 :
+          {this.props.enddate}
+        </Text>
+        <Text style={styles.text}>
+          상품명 :
+          {this.props.giftname}
+        </Text>
+        <Text style={styles.text}>
+          사용처 :
+          {this.props.brandname}
+        </Text>
       </CardView>
     //   </SafeAreaView>
     );
@@ -26,23 +41,21 @@ export default class Giftcard extends React.Component {
 }
 
 const styles = StyleSheet.create({
-  safeAreaView: {
-    flex: 1,
-  },
   card: {
-    backgroundColor: 'white',
-    alignItems: 'center',
-    width: '100%',
+    // backgroundColor: 'red',
+    alignItems: 'flex-start',
+    width: '40%',
+    margin: '5%',
     display: 'flex',
-    margin: 10,
-    justifyContent: 'center',
-    alignSelf: 'center',
-    flex: 1,
+    // justifyContent: 'center',
+    // alignSelf: 'center',
+    // flex: 1,
   },
   text: {
-    textAlign: 'center',
-    margin: 10,
-    height: 75,
+    textAlign: 'left',
+    marginLeft: '3%',
+    marginTop: '10%',
+    marginBottom: '5%',
   },
   instructions: {
     textAlign: 'center',
