@@ -1,83 +1,36 @@
-import React, { Component } from 'react';
-import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
-import CardView from 'react-native-cardview';
+/* eslint-disable import/extensions */
+/* eslint-disable import/no-unresolved */
+/* eslint-disable react/prefer-stateless-function */
+/* eslint-disable no-use-before-define */
+/* eslint-disable react/jsx-filename-extension */
+import React from 'react';
+import {
+  StyleSheet, View, SafeAreaView,
+} from 'react-native';
+import Giftcard from './cardcomponent';
 
 export default class Giftview extends React.Component {
   render() {
     return (
       <SafeAreaView style={styles.safeAreaView}>
         <View style={styles.container}>
-          <View flexDirection="row">
-            <CardView
-              cardElevation={0}
-              cardMaxElevation={1}
-              cornerRadius={5}
-              style={styles.card}
-            >
-                <Text style={styles.text}>Elevation 0</Text>
-            </CardView>
-            <CardView
-              cardElevation={1}
-              cardMaxElevation={1}
-              cornerRadius={5}
-              style={styles.card}
-            >
-              <Text style={styles.text}>Elevation 1</Text>
-            </CardView>
-          </View>
-          <View flexDirection="row">
-            <CardView
-              cardElevation={2}
-              cardMaxElevation={2}
-              cornerRadius={5}
-              style={styles.card}
-            >
-              <Text style={styles.text}>Elevation 2</Text>
-            </CardView>
-            <CardView
-              cardElevation={3}
-              cardMaxElevation={3}
-              cornerRadius={5}
-              style={styles.card}
-            >
-              <Text style={styles.text}>Elevation 3</Text>
-            </CardView>
-          </View>
-          <View flexDirection="row">
-            <CardView
-              cardElevation={4}
-              cardMaxElevation={4}
-              cornerRadius={5}
-              style={styles.card}
-            >
-              <Text style={styles.text}>Elevation 4</Text>
-            </CardView>
-            <CardView
-              cardElevation={5}
-              cardMaxElevation={5}
-              cornerRadius={5}
-              style={styles.card}
-            >
-              <Text style={styles.text}>Elevation 5</Text>
-            </CardView>
-          </View>
-          <View flexDirection="row">
-            <CardView
-              cardElevation={6}
-              cardMaxElevation={6}
-              cornerRadius={5}
-              style={styles.card}
-            >
-              <Text style={styles.text}>Elevation 6</Text>
-            </CardView>
-            <CardView
-              cardElevation={7}
-              cardMaxElevation={7}
-              cornerRadius={5}
-              style={styles.card}
-            >
-              <Text style={styles.text}>Elevation 7</Text>
-            </CardView>
+          <View flexDirection="column">
+            <View flexDirection="row">
+              <Giftcard />
+              <Giftcard />
+            </View>
+            <View flexDirection="row">
+              <Giftcard />
+              <Giftcard />
+            </View>
+            <View flexDirection="row">
+              <Giftcard />
+              <Giftcard />
+            </View>
+            <View flexDirection="row">
+              <Giftcard />
+              <Giftcard />
+            </View>
           </View>
         </View>
       </SafeAreaView>
@@ -87,28 +40,20 @@ export default class Giftview extends React.Component {
 
 const styles = StyleSheet.create({
   safeAreaView: {
-    flex: 1
+    flex: 1,
   },
   container: {
-    flex: 1
-    // backgroundColor: '#EEEEEE',
-  },
-  card: {
-    backgroundColor: 'white',
-    alignItems: 'center',
-    justifyContent: 'center',
-    alignSelf: 'center',
     flex: 1,
-    margin: 10
+    // backgroundColor: '#EEEEEE',
   },
   text: {
     textAlign: 'center',
     margin: 10,
-    height: 75
+    height: 75,
   },
   instructions: {
     textAlign: 'center',
     color: '#333333',
-    marginBottom: 5
-  }
+    marginBottom: 5,
+  },
 });

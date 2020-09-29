@@ -1,13 +1,15 @@
+/* eslint-disable react/prefer-stateless-function */
+/* eslint-disable react/jsx-filename-extension */
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import {
+  StyleSheet, Text, Button, View,
+} from 'react-native';
 
 class TopBar extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Left</Text>
-        <Text>TopBar</Text>
-        <Text>Right</Text>
+        <Button title="Press Me" />
       </View>
     );
   }
@@ -22,8 +24,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between', // center, space-around
     paddingLeft: 10,
-    paddingRight: 10
-  }
+    paddingRight: 10,
+  },
 });
 
 export default TopBar;
