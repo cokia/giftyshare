@@ -6,7 +6,7 @@
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import {
-  StyleSheet, Text,
+  StyleSheet, Text, Image,
 } from 'react-native';
 import CardView from 'react-native-cardview';
 
@@ -18,12 +18,15 @@ export default class Giftcard extends React.Component {
         cardElevation={5}
         cardMaxElevation={5}
         cornerRadius={5}
-        style={[{ backgoundColor: '#125d34' },
-          styles.card,
-        ]}
+        style={
+          styles.card
+        }
       >
-        <Text style={styles.text}>
-          유효기간 :
+        <Image
+          style={styles.itemimage}
+          source={{ uri: 'https://lh3.googleusercontent.com/proxy/WmrXeuyd0ouymAX-5HNZqpS8Qk0PUUvSxMR__SQTNtfVGQmFICn3Yw_Iqe_dQgr1rOYjYxPC8gEkgMga6ceEJci-YLmng4H_CQkPBRR1be7MdunOmiE' }}
+        />
+        <Text style={styles.dayText}>
           {this.props.enddate}
         </Text>
         <Text style={styles.text}>
@@ -42,7 +45,7 @@ export default class Giftcard extends React.Component {
 
 const styles = StyleSheet.create({
   card: {
-    // backgroundColor: 'red',
+    backgroundColor: '#036635',
     alignItems: 'flex-start',
     width: '40%',
     margin: '5%',
@@ -51,7 +54,23 @@ const styles = StyleSheet.create({
     // alignSelf: 'center',
     // flex: 1,
   },
+  dayText: {
+    backgroundColor: 'gray',
+    position: 'absolute',
+    top: 0,
+    textAlign: 'right',
+    right: 0,
+    fontSize: 18,
+    marginTop: '5%',
+  },
+  itemimage: {
+    height: '5%',
+    width: '30%',
+    marginLeft: '3%',
+    marginTop: '3%',
+  },
   text: {
+    color: 'white',
     textAlign: 'left',
     marginLeft: '3%',
     marginTop: '10%',

@@ -15,7 +15,10 @@ export default class Giftview extends React.Component {
       <SafeAreaView style={styles.safeAreaView}>
         <View style={styles.container}>
           <View style={styles.test}>
-            <Giftcard bgColor="#123dfd" enddate="2020-09-16" giftname="TEST" brandname="스타벅스" />
+            <Giftcard bgColor="#123dfd" enddate="D-16" giftname="TEST" brandname="스타벅스" />
+            <Giftcard />
+            <Giftcard />
+            <Giftcard />
             <Giftcard />
             <Giftcard />
             <Giftcard />
