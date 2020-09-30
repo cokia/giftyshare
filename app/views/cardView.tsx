@@ -16,12 +16,12 @@ export default class Giftview extends React.Component {
         <View style={styles.container}>
           <View style={styles.test}>
             <Giftcard bgColor="#123dfd" enddate="D-16" giftname="TEST" brandname="스타벅스" />
-            <Giftcard />
-            <Giftcard />
-            <Giftcard />
-            <Giftcard />
-            <Giftcard />
-            <Giftcard />
+            <Giftcard bgColor="#123dfd" enddate="D-16" giftname="TEST" brandname="스타벅스" />
+            <Giftcard bgColor="#123dfd" enddate="D-16" giftname="TEST" brandname="스타벅스" />
+            <Giftcard bgColor="#123dfd" enddate="D-16" giftname="TEST" brandname="스타벅스" />
+            <Giftcard bgColor="#123dfd" enddate="D-16" giftname="TEST" brandname="스타벅스" />
+            <Giftcard bgColor="#123dfd" enddate="D-16" giftname="TEST" brandname="스타벅스" />
+            <Giftcard bgColor="#123dfd" enddate="D-16" giftname="TEST" brandname="스타벅스" />
             <Giftcard />
             <Giftcard />
             <Giftcard />
