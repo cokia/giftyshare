@@ -1,81 +1,18 @@
 /* eslint-disable no-use-before-define */
 import React from 'react';
 import {
-  SafeAreaView, StyleSheet, StatusBar, Text, ScrollView, View,
+  SafeAreaView, StatusBar,
 } from 'react-native';
-import {
-  Colors,
-} from 'react-native/Libraries/NewAppScreen';
-import PropertyBar from './components/propertyBar';
-import CardView from './components/cardView';
-
-declare const global: {HermesInternal: null | {}};
+import MainScreen from './views/mainScreen';
 
 const App = () => (
   <>
     <StatusBar barStyle="dark-content" />
     <SafeAreaView>
-      {/* <Header /> */}
-      {global.HermesInternal == null ? null : (
-        <View style={styles.engine} />
-      )}
-      <View style={styles.body}>
-        <View style={styles.sectionContainer}>
-          <Text style={styles.sectionTitle}>
-            기프티쉐어,
-            ~~웅앵웅
-          </Text>
-        </View>
-        <PropertyBar />
-      </View>
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={styles.scrollView}
-      >
-        {/* @ts-ignore */}
-        <CardView />
-      </ScrollView>
+      {/* @ts-ignore */}
+      <MainScreen />
     </SafeAreaView>
   </>
 );
-
-const styles = StyleSheet.create({
-  scrollView: {
-    backgroundColor: Colors.lighter,
-  },
-  engine: {
-    position: 'absolute',
-    right: 0,
-  },
-  body: {
-    backgroundColor: Colors.white,
-  },
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-    color: Colors.black,
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-    color: Colors.dark,
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-  footer: {
-    color: Colors.dark,
-    fontSize: 12,
-    fontWeight: '600',
-    padding: 4,
-    paddingRight: 12,
-    textAlign: 'right',
-  },
-});
 
 export default App;

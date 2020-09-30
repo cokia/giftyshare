@@ -7,7 +7,7 @@ import React from 'react';
 import {
   StyleSheet, View, SafeAreaView,
 } from 'react-native';
-import Giftcard from './cardcomponent';
+import Giftcard from '../components/cardcomponent';
 
 export default class Giftview extends React.Component {
   render() {
