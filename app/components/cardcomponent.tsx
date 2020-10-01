@@ -24,7 +24,7 @@ export default class Giftcard extends React.Component {
       >
         <Image
           style={styles.itemimage}
-          source={{ uri: 'https://lh3.googleusercontent.com/proxy/WmrXeuyd0ouymAX-5HNZqpS8Qk0PUUvSxMR__SQTNtfVGQmFICn3Yw_Iqe_dQgr1rOYjYxPC8gEkgMga6ceEJci-YLmng4H_CQkPBRR1be7MdunOmiE' }}
+          source={{ uri: 'http://item.ssgcdn.com/99/55/26/item/1000014265599_i1_1200.jpg' }}
         />
         <Text style={styles.dayText}>
           {this.props.enddate}

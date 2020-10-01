@@ -1,3 +1,4 @@
+/* eslint-disable import/extensions */
 /* eslint-disable react/jsx-filename-extension */
 /* eslint-disable no-console */
 /* eslint-disable no-use-before-define */
@@ -5,6 +6,7 @@ import React, { Component } from 'react';
 import { StyleSheet } from 'react-native';
 import ActionButton from 'react-native-action-button';
 import Icon from 'react-native-vector-icons/Ionicons';
+import AddGiftModal from '../views/addGiftModal';
 
 Icon.loadFont();
 
